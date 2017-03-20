@@ -1,0 +1,5 @@
+---
+- name: 'Run foreman installer'
+  shell: >
+      foreman-installer {{ (foreman_installer_verbose == True) | ternary("-v", "") }} --scenario {{ foreman_installer_scenario }}
+

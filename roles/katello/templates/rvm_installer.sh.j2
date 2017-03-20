@@ -1,0 +1,9 @@
+#!/bin/bash
+curl -L get.rvm.io | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm reload
+rvm install 2.4.0
+rvm use 2.4.0 --default
+gem install 'foreman_cpp_cloudstack'
+
+

@@ -1,0 +1,17 @@
+---
+- name: Add the OS specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+      - "{{ ansible_distribution }}{{ ansible_distribution_major_version }}.yml"
+      - "{{ ansible_os_family }}.yml"
+
+- include: repos.yml
+- include: packages.yml
+- include: foreman-plugins.yml
+- include: foreman-smart-proxy-plugins.yml
+- include: cloudstack_integration.yml
+- include: firewalld.yml
+
+
+
+

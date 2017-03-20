@@ -1,0 +1,13 @@
+---
+- name: copy rvm installation script to remote system
+  template:
+      src: rvm_installer.sh.j2 
+      dest: /root/rvm_installer.sh
+
+
+- name: run rvm installation script
+  shell: sh /root/rvm_installer.sh
+
+- name: Install cloudstack plugin with gem
+  shell: gem install 'foreman_cpp_cloudstack'
+

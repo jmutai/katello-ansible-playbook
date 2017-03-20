@@ -1,0 +1,4 @@
+---
+- name: restart foreman
+  service: name={{ item }} state=restarted
+  with_items: "{{ foreman_services }}"

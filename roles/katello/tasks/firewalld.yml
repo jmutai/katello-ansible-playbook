@@ -1,0 +1,94 @@
+---
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    service: https
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 53/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 80/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 3000/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 3306/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 5432/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 8140/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 8443/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 9090/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 5647/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 5910-5930/tcp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 53/udp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 67/udp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 68/udp
+
+- firewalld:
+    zone: public
+    permanent: true
+    state: enabled
+    port: 69/udp
+
+- name: reload firewalld
+  command: firewall-cmd --reload 
+

@@ -1,0 +1,70 @@
+---
+# foreman baseurl repo urls
+foreman_repo: "http://yum.theforeman.org/releases/1.14/el{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/foreman-release.rpm"
+
+# Katello baseurl repo
+
+katello_repo: "http://fedorapeople.org/groups/katello/releases/yum/3.3/katello/el{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/katello-repos-latest.rpm"
+
+# Puppet repository
+puppetlabs_repo: "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-{{ ansible_distribution_major_version }}.noarch.rpm"
+
+# epel repo
+
+epel_repo: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"
+
+
+foreman_installer_verbose: True
+foreman_installer_scenario: katello
+
+# foreman admin settings
+#
+foreman_installer_admin_email: "admin@example.com"
+foreman_installer_admin_password: password
+foreman_installer_smtp_domain: "example.com"
+foreman_installer_smtp_address: "mail.example.com"
+foreman_installer_smtp_password: "password"
+foreman_installer_smtp_authentication: "login"
+foreman_installer_smtp_port: "25"
+
+foreman_plugins:
+    - foreman-ovirt
+    - foreman-libvirt
+    - foreman-vmware
+    - foreman-openstack
+    - tfm-rubygem-foreman_discovery
+    - tfm-rubygem-foreman_xen
+    - tfm-rubygem-foreman_salt
+    - tfm-rubygem-foreman_chef
+    - tfm-rubygem-foreman_bootdisk
+    - tfm-rubygem-foreman_ansible
+    - tfm-rubygem-foreman_cockpit
+    - tfm-rubygem-foreman_dhcp_browser
+    - tfm-rubygem-foreman_expire_hosts
+    - tfm-rubygem-foreman_column_view
+    - tfm-rubygem-fog-libvirt
+    - tfm-rubygem-hammer_cli_foreman_discovery
+    - tfm-rubygem-foreman_remote_execution
+    - tfm-rubygem-foreman-tasks
+    - tfm-rubygem-foreman_templates
+    - tfm-rubygem-foreman_snapshot
+    - tfm-rubygem-foreman_hooks
+
+foreman_smart_proxy_plugins:
+    - rubygem-smart_proxy_ansible
+    - rubygem-smart_proxy_chef
+    - rubygem-smart_proxy_discovery
+    - rubygem-smart_proxy_discovery_image
+    - rubygem-smart_proxy_openscap
+    - rubygem-smart_proxy_remote_execution_ssh
+    - rubygem-smart_proxy_monitoring
+    - rubygem-smart_proxy_dns_powerdns
+    - rubygem-smart_proxy_abrt
+    - rubygem-smart_proxy_omaha
+    - rubygem-smart_proxy_dns_infoblox
+    - rubygem-smart_proxy_monitoring
+    - rubygem-smart_proxy_pulp
+
+
+
+

@@ -1,0 +1,12 @@
+---
+- name: configure foreman 
+  shell: >
+      foreman-installer -v  \
+      --enable-foreman-plugin-ansible \
+      --enable-foreman-plugin-bootdisk \
+      --enable-foreman-plugin-chef \
+      --enable-foreman-plugin-discovery \
+      --enable-foreman-plugin-remote-execution \
+      --enable-foreman-plugin-openscap \
+      --enable-foreman-plugin-setup \
+      --enable-foreman-plugin-templates

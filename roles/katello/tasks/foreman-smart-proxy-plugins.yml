@@ -1,0 +1,9 @@
+---
+- name: Install foreman smart proxy plugins
+  package:
+      name: "{{ item }}"
+      state: present
+  with_items: "{{ foreman_smart_proxy_plugins }}"
+  notify: restart foreman
+
+

@@ -1,0 +1,28 @@
+---
+- name: add katello repo
+  package:
+      name: "{{ katello_repo }}"
+      state: present
+
+- name: add foreman repo
+  package:
+      name: "{{ foreman_repo }}"
+      state: present
+
+- name: add puppetlabs repo
+  package:
+      name: "{{ puppetlabs_repo }}"
+      state: present
+
+- name: add epel repo
+  package:
+      name: "{{ epel_repo }}"
+      state: present
+
+- name: add additional repositories
+  package:
+      name: "{{ item }}"
+      state: present
+  with_items: "{{ katello_extra_repos }}"
+
+

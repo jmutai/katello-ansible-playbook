@@ -1,0 +1,17 @@
+---
+- name: install system updates for centos systems
+  yum: name=* state=latest update_cache=yes
+  when: ansible_os_family == "RedHat"
+
+- name: install development tools
+  yum:
+    name: '@development' 
+    state: latest
+
+- name: Install katello
+  package:
+      name: "{{ item }}"
+      state: present
+  with_items: "{{ katello_pkg }}"
+
+

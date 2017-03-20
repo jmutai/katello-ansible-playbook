@@ -1,0 +1,9 @@
+---
+- name: katello and foreman playbook
+  hosts: katello
+  remote_user: root
+  become: yes
+  become_method: sudo
+  roles:
+    - selinux
+    - katello

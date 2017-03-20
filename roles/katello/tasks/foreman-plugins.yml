@@ -1,0 +1,8 @@
+---
+- name: Install foreman plugins
+  yum:
+    name: "{{ item }}"
+    state: present
+  notify: restart foreman
+  with_items: "{{ foreman_plugins }}"
+

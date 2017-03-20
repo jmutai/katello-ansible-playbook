@@ -1,0 +1,8 @@
+---
+katello_pkg: katello
+katello_extra_repos:
+    - foreman-release-scl
+foreman_services:
+    - httpd
+    - foreman-tasks
+    - foreman-proxy
